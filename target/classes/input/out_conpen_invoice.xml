@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<compensationList>
+    <compensation contentName="청구서01">
+        <item name="피보험자명">홍길동</item>
+        <item name="피보험자_주민등록번호">810101-1234567</item>
+        <item name="사고일자">20141108</item>
+        <item name="사고유형">상해</item>
+        <item name="사고내용">건물계단에서 넘어짐</item>
+        <item name="지급처은행코드">031</item>
+        <item name="지급처계좌번호">012-00114-123</item>
+        <item name="예금주">홍길동</item>
+        <item name="지급안내방법">문자메시지</item>
+        <item name="지급안내대상">010-1234-5678</item>
+        <item name="접수병원_사업자번호">01-123456-8</item>
+        <compList>
+            <compItem id="1">
+                <item name="개인정보_동의항목">개인정보활용동의_1</item>
+                <item name="개인정보_동의여부">Y</item>
+            </compItem>
+            <compItem id="2">
+                <item name="개인정보_동의항목">개인정보활용동의_2</item>
+                <item name="개인정보_동의여부">Y</item>
+            </compItem>
+            <compItem id="3">
+                <item name="개인정보_동의항목">개인정보활용동의_3</item>
+                <item name="개인정보_동의여부">Y</item>
+            </compItem>
+        </compList>
+        <content>7J206rKD7J2AIOyyreq1rOyEnCDthYzsiqTtirgg7YyM7J287J6F64uI64ukLg==</content>
+    </compensation>
+</compensationList>

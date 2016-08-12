@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><OperationOutcome xmlns="http://hl7.org/fhir"><text><status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <table class="grid">
+        <tr>
+          <td>
+            <b>Severity</b>
+          </td>
+          <td>
+            <b>Location</b>
+          </td>
+          <td>
+            <b>Code</b>
+          </td>
+          <td>
+            <b>Details</b>
+          </td>
+          <td>
+            <b>Diagnostics</b>
+          </td>
+          <td>
+            <b>Source</b>
+          </td>
+        </tr>
+        <tr>
+          <td>ERROR</td>
+          <td>XML Source (line 40, col13)</td>
+          <td>Invalid Content</td>
+          <td>cvc-complex-type.2.4.a: &#39;format&#39; 요소로 시작하는 부적합한 콘텐츠가 발견되었습니다. &#39;{&quot;http://hl7.org/fhir&quot;:type}&#39; 중 하나가 필요합니다.</td>
+          <td/>
+          <td>Schema</td>
+        </tr>
+        <tr>
+          <td>INFORMATION</td>
+          <td>/f:Bundle/f:entry[1]/f:resource/f:Binary/f:contentType (line 10, col52)</td>
+          <td>Invalid Code</td>
+          <td>Binding has no source, so can&#39;t be checked</td>
+          <td/>
+          <td>InstanceValidator</td>
+        </tr>
+        <tr>
+          <td>ERROR</td>
+          <td>/f:Bundle/f:entry/f:resource/f:DocumentReference/f:format (line 40, col13)</td>
+          <td>Invalid Content</td>
+          <td>Element is unknown or does not match any slice</td>
+          <td/>
+          <td>InstanceValidator</td>
+        </tr>
+        <tr>
+          <td>ERROR</td>
+          <td>/f:Bundle/f:entry/f:resource/f:DocumentReference (line 18, col58)</td>
+          <td>Structural Issue</td>
+          <td>Element &#39;/f:Bundle/f:entry/f:resource/f:DocumentReference.content&#39;: minimum required = 1, but only found 0</td>
+          <td/>
+          <td>InstanceValidator</td>
+        </tr>
+        <tr>
+          <td>INFORMATION</td>
+          <td>/f:Bundle/f:entry/f:resource/f:DocumentReference/f:type (line 46, col20)</td>
+          <td>Invalid Code</td>
+          <td>None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/c80-doc-typecodes (http://hl7.org/fhir/ValueSet/c80-doc-typecodes, and a code is recommended to come from this value set</td>
+          <td/>
+          <td>InstanceValidator</td>
+        </tr>
+        <tr>
+          <td>ERROR</td>
+          <td>??</td>
+          <td>Structural Issue</td>
+          <td>Unknown Content format @  START_TAG seen ...&lt;/subject&gt;\n\t\t\t &lt;format&gt;... @40:13</td>
+          <td/>
+          <td>InstanceValidator</td>
+        </tr>
+      </table>
+    </div></text><issue><extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source"><valueCode value="Schema"/></extension><severity value="error"/><code value="invalid"/><details><text value="cvc-complex-type.2.4.a: &#39;format&#39; 요소로 시작하는 부적합한 콘텐츠가 발견되었습니다. &#39;{&quot;http://hl7.org/fhir&quot;:type}&#39; 중 하나가 필요합니다."/></details><location value="XML Source (line 40, col13)"/></issue><issue><extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source"><valueCode value="InstanceValidator"/></extension><severity value="information"/><code value="code-invalid"/><details><text value="Binding has no source, so can&#39;t be checked"/></details><location value="/f:Bundle/f:entry[1]/f:resource/f:Binary/f:contentType (line 10, col52)"/></issue><issue><extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source"><valueCode value="InstanceValidator"/></extension><severity value="error"/><code value="invalid"/><details><text value="Element is unknown or does not match any slice"/></details><location value="/f:Bundle/f:entry/f:resource/f:DocumentReference/f:format (line 40, col13)"/></issue><issue><extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source"><valueCode value="InstanceValidator"/></extension><severity value="error"/><code value="structure"/><details><text value="Element &#39;/f:Bundle/f:entry/f:resource/f:DocumentReference.content&#39;: minimum required = 1, but only found 0"/></details><location value="/f:Bundle/f:entry/f:resource/f:DocumentReference (line 18, col58)"/></issue><issue><extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source"><valueCode value="InstanceValidator"/></extension><severity value="information"/><code value="code-invalid"/><details><text value="None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/c80-doc-typecodes (http://hl7.org/fhir/ValueSet/c80-doc-typecodes, and a code is recommended to come from this value set"/></details><location value="/f:Bundle/f:entry/f:resource/f:DocumentReference/f:type (line 46, col20)"/></issue><issue><extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source"><valueCode value="InstanceValidator"/></extension><severity value="error"/><code value="structure"/><details><text value="Unknown Content format @  START_TAG seen ...&lt;/subject&gt;\n\t\t\t &lt;format&gt;... @40:13"/></details><location value="??"/></issue></OperationOutcome>

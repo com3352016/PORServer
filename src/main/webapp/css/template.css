@@ -1,0 +1,18 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2014. 12. 29, 오전 11:27:57
+    Author     : ihis
+*/
+#mytab{
+    width:80%;
+}
+.labeli{background-color:#F9F9F9;float:left;padding:5px;width:80px;height:30px;border:1px solid #dedede;}
+.labeli.min{height:20px;}
+.inputbox{  display: inline;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;}

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="js/jquery-2.0.3.js" type="text/javascript"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/jsondata.js"></script>
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/bootstrap-theme.css" rel="stylesheet">
+  <link href="css/template.css" rel="stylesheet">
+<style>
+/*     @media (max-width: 480px) {  */
+/*     body { */
+/*         padding-top: 60px; */
+/*     } */
+    #create, #update, #search, #history{
+        padding-top: 20px;
+    }
+    .wrapper {
+    position:relative;
+    margin:0 auto;
+    overflow:hidden;
+	padding:5px;
+  	height:50px;
+}
+
+.list {
+    position:absolute;
+    left:0px;
+    top:0px;
+  	min-width:3000px;
+  	margin-left:12px;
+    margin-top:0px;
+}
+
+.list li{
+	display:table-cell;
+    position:relative;
+    text-align:center;
+    cursor:grab;
+    cursor:-webkit-grab;
+    color:#efefef;
+    vertical-align:middle;
+}
+
+.scroller {
+  text-align:center;
+  cursor:pointer;
+  display:none;
+  padding:7px;
+  padding-top:11px;
+  white-space:no-wrap;
+  vertical-align:middle;
+  background-color:#fff;
+}
+
+.scroller-right{
+  float:right;
+}
+
+.scroller-left {
+  float:left;
+}
+/* } */
+</style>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">IHIS</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container" id="patient">
+      <!-- Example row of columns -->
+      <div class="scroller scroller-left"><i class="glyphicon glyphicon-chevron-left"></i></div>
+      <div class="scroller scroller-right"><i class="glyphicon glyphicon-chevron-right"></i></div>
+      <div class="wrapper">
+          <ul class="nav nav-tabs list" id="mytab" >
+            <li><a href="#servicesubmit" data-toggle="tab">서비스등록</a></li>
+            <li><a href="#servicesearch" data-toggle="tab">서비스검색</a></li>
+          </ul>
+      </div>
+          <div class="tab-content">
+              <div class="tab-pane" id="servicesubmit">
+                  <table class="table table-striped">
+<!--                       <tr> -->
+<!--                           <td width="20%"> -->
+<!--                               <h3><span class="label label-primary">Server</span></h3> -->
+<!--                           </td> -->
+<!--                           <td> -->
+<!--                               <select class="serverselect" id="selCreateServer"> -->
+<!--                                 <option value="http://155.230.118.93:8080/PORServer/">registryServer</option> -->
+<!--                               </select> -->
+<!--                           </td> -->
+<!--                       </tr> -->
+                      <tr>
+                          <td width="20%">
+                              <h3><span class="label label-primary">이름</span></h3>
+                          </td>
+                          <td width="40%">
+                              <input type="text" class="inputbox" id="servicename" />
+                          </td>
+                      </tr>
+                      <tr>
+                          <td width="20%">
+                              <h3><span class="label label-primary">주소</span></h3>
+                          </td>
+                          <td width="40%">
+                              <input type="text" class="inputbox" id="serviceurl" />
+                          </td>
+                      </tr>
+<!--                       <tr> -->
+<!--                           <td width="20%"> -->
+<!--                               <h3><span class="label label-primary">patient submit</span></h3> -->
+<!--                           </td> -->
+<!--                           <td width="40%"> -->
+<!--                               <input type="text" class="inputbox" id="patientsubmit" value="Given Name"/> -->
+<!--                           </td> -->
+<!--                       </tr> -->
+<!--                       <tr> -->
+<!--                           <td width="20%"> -->
+<!--                               <h3><span class="label label-primary">api_url</span></h3> -->
+<!--                           </td> -->
+<!--                           <td> -->
+<!--                               <input type="text" class="inputbox" id="serviceapiurl" value="" /> -->
+<!--                           </td> -->
+<!--                       </tr> -->
+                      <tr>
+                          <td>
+                              <input type="button" id="servicesubmitButton" class="btn btn-success" value="서비스등록">
+                          </td>
+                          <td>
+                              
+                          </td>
+                      </tr>
+                  </table>
+<!--                   <table class="table table-striped"> -->
+<!--                       <tr> -->
+<!--                           <td> -->
+<!--                               <h3><span class="label label-primary">Created Patient</span></h3> -->
+<!--                           </td> -->
+<!--                       </tr> -->
+<!--                       <tr> -->
+<!--                           <td> -->
+<!--                               <textarea id="createArea" rows="20" cols="30"></textarea> -->
+<!--                           </td> -->
+<!--                       </tr> -->
+<!--                   </table> -->
+              </div>
+              <div class="tab-pane" id="servicesearch">
+                  <table class="table table-striped">
+                      <tr>
+                          <td width="20%">
+                              <h3><span class="label label-primary">name</span></h3>
+                          </td>
+                          <td>
+                              <input type="text" class="inputbox" id="servicesearchName" value="" />
+                          </td>
+                      </tr>
+<!--                       <tr> -->
+<!--                           <td width="20%"> -->
+<!--                               <h3><span class="label label-primary">url</span></h3> -->
+<!--                           </td> -->
+<!--                           <td> -->
+<!--                               <input type="text" class="inputbox" id="servicesearchUrl" value="" /> -->
+<!--                           </td> -->
+<!--                       </tr> -->
+                      <tr>
+                          <td>
+                              <input type="button" id="servicesearchButton" class="btn btn-success" value="서비스검색">
+                          </td>
+                          <td>
+                              
+                          </td>
+                      </tr>
+                  </table>
+                  <table class="table table-striped" id="searchTable">
+                      <tr>
+                          <td>
+                              <h3><span class="label label-primary">name</span></h3>
+                          </td>
+                          <td>
+                          	  <h3><span class="label label-primary">url</span></h3>
+                          </td>
+                          <td>
+                          	  <h3><span class="label label-primary">service_url</span></h3>
+                          </td>
+                          <td>
+                              <h3><span class="label label-primary">sign_in</span></h3>
+                          </td>
+                      </tr>
+                  	</table>
+                  <table>
+                      
+                  </table> 
+              </div>
+          </div>
+      <hr>
+      <footer>
+        <p></p>
+      </footer>
+    </div>
+</body>
+</html>

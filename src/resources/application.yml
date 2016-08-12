@@ -1,0 +1,16 @@
+dev:
+#   relyServer: http://211.174.163.117
+#   port: 8080
+   relyServer: http://localhost
+   port: 9070
+   fhir_server_address: http://localhost:9090/fhir
+   schema: ./src/main/resources/fhir-all-xsd/fhir-all.xsd
+   schematron: ./src/main/resources/fhir-all-xsd/fhir-invariants.sch
+   iso_svrl_for_xslt2: ./src/main/resources/iso-schematron-xslt2/iso_svrl_for_xslt2.xsl
+   output: ./src/main/resources/output
+#   fhirResource: ./src/main/resources/examples/patient-example-a(pat1).xml
+   fhirResource: ./src/main/resources/fhirResources/patient(pat2)_error.xml
+prod:
+   relyServer: http://155.230.118.94
+   port: 9091
+   fhir_server_address: http://155.230.118.94:9091/fhir
